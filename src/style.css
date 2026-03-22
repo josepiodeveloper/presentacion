@@ -122,6 +122,11 @@ span {
   background-color: #5d47bb;
   color: #fff;
 }
+
+.box-fill ul li::before {
+  color: #fff;
+}
+
 .box-border {
   border: solid 2px #5d47bb;
   border-radius: 30px;

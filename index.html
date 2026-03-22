@@ -132,18 +132,30 @@
           </section>
           <section data-transition="convex">
             <p class="small-title">Planteamiento del Problema</p>
-            <ul style="font-size: 0.75em; text-align: left">
-              <li><b style="color: #5d47bb">Gestión descentralizada:</b> La administración de los espacios físicos recae en cada dependencia de forma independiente.</li>
-              <li><b style="color: #5d47bb">Proceso manual:</b> Solicitudes presenciales/correos y verificación en calendarios físicos o herramientas desconectadas.</li>
-              <li><b style="color: #5d47bb">Ausencia de sistema unificado:</b> No existe un catálogo público con disponibilidad en tiempo real ni métricas confiables de uso.</li>
-              <li><b style="color: #5d47bb">Consecuencias directas:</b>
-                <ul style="margin-left: 20px">
-                  <li>Duplicidad de reservas y solapamiento de eventos.</li>
-                  <li>Falta de información pública sobre la disponibilidad y capacidad.</li>
-                  <li>Dificultades de coordinación y retrasos comunicacionales.</li>
-                </ul>
-              </li>
-            </ul>
+            <div class="flex flex-col gap-6 px-10" style="height: 70vh; justify-content: center">
+              <div class="flex items-center justify-between gap-6">
+                <div class="p-5 flex flex-col items-center justify-center" style="flex: 1;">
+                  <img src="public/intro/conexiones.png" alt="gestion descentralizada" width="110" style="margin: 0" />
+                  <p style="margin: 15px 0 0 0; font-size: 0.5em; font-weight: 500; color: #5d47bb; text-align: center">
+                    Gestión descentralizada
+                  </p>
+                </div>
+
+                <div class="p-5 flex flex-col items-center justify-center" style="flex: 1;">
+                  <img src="public/lista-de-verificacion.png" alt="proceso manual" width="110" style="margin: 0" />
+                  <p style="margin: 15px 0 0 0; font-size: 0.5em; font-weight: 500; color: #5d47bb; text-align: center">
+                    Proceso manual
+                  </p>
+                </div>
+
+                <div class="p-5 flex flex-col items-center justify-center" style="flex: 1;">
+                  <img src="public/integracion-de-datos.png" alt="sin sistema unificado" width="110" style="margin: 0" />
+                  <p style="margin: 15px 0 0 0; font-size: 0.5em; font-weight: 500; color: #5d47bb; text-align: center">
+                    Sin sistema unificado
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
           <section data-transition="convex">
             <p class="small-title">Problemática Inicial</p>
@@ -207,53 +219,94 @@
           </section>
           <section data-transition="convex">
             <p class="small-title">Justificación</p>
-            <ul style="font-size: 0.7em; text-align: left">
-              <li><b style="color: #5d47bb">Práctica:</b> Centraliza el inventario en un repositorio digital único, validando disponibilidad en tiempo real y reduciendo conflictos logísticos.</li>
-              <li><b style="color: #5d47bb">Tecnológica:</b> Digitaliza procesos administrativos con recorridos virtuales 360° y comunicación bidireccional asíncrona.</li>
-              <li><b style="color: #5d47bb">Institucional:</b> Provee un sistema seguro, escalable y con control de accesos basado en roles, generando métricas confiables para la planificación académica.</li>
-              <li><b style="color: #5d47bb">Social:</b> Mejora la experiencia de la comunidad universitaria al permitir la consulta, visualización y gestión  transparente de espacios.</li>
-            </ul>
+            <div class="grid grid-cols-2 gap-6 px-10" style="align-content: center">
+              <div class="box-border p-4">
+                <div class="flex items-center gap-4">
+                  <img src="public/cheque.png" alt="practica" width="70" style="margin: 0" />
+                  <p style="margin: 0; color: #5d47bb; font-weight: 900">Práctica</p>
+                </div>
+                <ul style="text-align: left; margin: 15px 0 0 0; font-size: 0.5em">
+                  <li>Centraliza inventario</li>
+                  <li>Disponibilidad en tiempo real</li>
+                  <li>Reduce solapamientos</li>
+                </ul>
+              </div>
+
+              <div class="box-fill p-4">
+                <div class="flex items-center gap-4">
+                  <img src="public/intro/tuerca.png" alt="tecnologica" width="70" style="margin: 0" />
+                  <p style="margin: 0; font-weight: 900">Tecnológica</p>
+                </div>
+                <ul class="marker:text-white!" style="text-align: left; margin: 15px 0 0 0; font-size: 0.5em">
+                  <li>Digitalización de procesos</li>
+                  <li>Recorridos virtuales 360°</li>
+                  <li>Chat + notificaciones</li>
+                </ul>
+              </div>
+
+              <div class="box-fill p-4">
+                <div class="flex items-center gap-4">
+                  <img src="public/centro-de-datos.png" alt="institucional" width="70" style="margin: 0" />
+                  <p style="margin: 0; font-weight: 900">Institucional</p>
+                </div>
+                <ul style="text-align: left; margin: 15px 0 0 0; font-size: 0.5em">
+                  <li>RBAC</li>
+                  <li>Auditoría + reportes</li>
+                </ul>
+              </div>
+
+              <div class="box-border p-4">
+                <div class="flex items-center gap-4">
+                  <img src="public/intro/internacional.png" alt="social" width="70" style="margin: 0" />
+                  <p style="margin: 0; color: #5d47bb; font-weight: 900">Social</p>
+                </div>
+                <ul style="text-align: left; margin: 15px 0 0 0; font-size: 0.5em">
+                  <li>Transparencia</li>
+                  <li>Mejor experiencia de usuario</li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Alcance Funcional - Módulos</p>
             <div class="flex flex-col gap-2 mt-3">
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ✅ <strong>Autenticación y Control de Acceso 🔐</strong>:
                 <p class="subitem">
                   🔹 Mecanismos de seguridad para <b class="focus">registro e inicio de sesión</b>, garantizando acceso según rol.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ✅ <strong>Gestión de Inventario y Espacios 🏛️</strong>:
                 <p class="subitem">
                   🔹 Administración digital de infraestructura: <b class="focus">dependencias, espacios y recursos</b>.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ✅ <strong>Recorridos Virtuales e Inmersión 🌐</strong>:
                 <p class="subitem">
                   🔹 Exploración visual 360° con <b class="focus">reconocimiento de gestos (IA)</b> para control sin periféricos.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ✅ <strong>Gestión de Reservas 📅</strong>:
                 <p class="subitem">
                   🔹 Flujo centralizado: <b class="focus">calendarios interactivos</b> y aprobación/rechazo de solicitudes.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ✅ <strong>Comunicación en Tiempo Real 💬</strong>:
                 <p class="subitem">
                   🔹 Sistema de <b class="focus">mensajería (chat) y notificaciones automáticas</b> sobre el estado de solicitudes.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ✅ <strong>Auditoría y Reportes 📈</strong>:
                 <p class="subitem">
                   🔹 Estadísticas de uso y <b class="focus">registro histórico inalterable</b> de acciones administrativas.
@@ -265,42 +318,42 @@
           <section data-transition="convex">
             <p class="small-title">Alcance Funcional - Roles</p>
             <div class="flex flex-col gap-2 mt-3">
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 👤 <strong>Usuario General (Público)</strong>:
                 <p class="subitem">
                   🔹 Acceso libre para consultar catálogo de espacios y realizar recorridos virtuales.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 🏛️ <strong>Usuario de la Comunidad</strong>:
                 <p class="subitem">
                   🔹 Miembros autenticados: generan solicitudes de reserva, gestionan perfil y se comunican vía chat.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 👁️ <strong>Administrador Lector</strong>:
                 <p class="subitem">
                   🔹 Permisos de visualización: consulta reportes y calendarios sin modificar configuraciones.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ✅ <strong>Administrador de Solicitudes</strong>:
                 <p class="subitem">
                   🔹 Procesa (aprueba/rechaza) solicitudes de reserva y gestiona comunicación vía chat.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 🏢 <strong>Administrador de Dependencia</strong>:
                 <p class="subitem">
                   🔹 Control total sobre espacios y recursos de su dependencia específica.
                 </p>
               </span>
 
-              <span class="text-justify block title-element" style="font-size: 0.5em">
+              <span class="text-justify block title-element" style="font-size: 0.6em">
                 ⚙️ <strong>Superadministrador</strong>:
                 <p class="subitem">
                   🔹 Control global: configuración del sistema, gestión de usuarios/roles y acceso irrestricto.
@@ -1137,13 +1190,17 @@
 
           <section data-transition="convex">
             <p class="small-title">Modelo de Desarrollo</p>
-            <ul style="font-size: 0.7em; text-align: left">
-              <li><b style="color: #5d47bb">Modelo Incremental e Iterativo:</b> Desarrollo evolutivo mediante iteraciones que producen versiones sucesivas (incrementos).</li>
-              <li><b style="color: #5d47bb">Gestión Ágil con Kanban:</b> Visualización del flujo de trabajo mediante tablero Kanban (Por hacer, En desarrollo, Pruebas, Completado).</li>
-              <li><b style="color: #5d47bb">Ventajas:</b> Flexibilidad para priorizar tareas críticas, gestión de cambios tecnológicos y ritmo constante sin sprints fijos.</li>
-            </ul>
-            <div class="flex justify-center mt-4">
-              <img src="public/kanban.png" alt="kanban" width="300" />
+            <div class="flex flex-col items-center justify-between gap-5 px-10">
+              <div class="flex flex-col justify-center" style="flex: 0 0 40%">
+                <ul style="font-size: 0.75em; text-align: left; margin: 0">
+                  <li><b style="color: #5d47bb">Modelo Incremental e Iterativo</b></li>
+                  <li><b style="color: #5d47bb">Gestión Ágil con Kanban</b></li>
+                </ul>
+              </div>
+
+              <div class="flex justify-center items-center" style="flex: 0 0 60%; height: 100%">
+                <img style="max-height: 100%; width: auto; object-fit: contain" src="public/kanban.png" alt="kanban" />
+              </div>
             </div>
           </section>
 
@@ -1167,7 +1224,6 @@
             <ul style="font-size: 0.7em; text-align: left">
               <li><b style="color: #5d47bb">Identificación de Actores:</b> 5 roles del sistema con permisos específicos y control de acceso granular.</li>
               <li><b style="color: #5d47bb">Análisis de Requerimientos:</b> Proceso continuo de refinamiento para definir el alcance del sistema.</li>
-              <li><b style="color: #5d47bb">Contenido:</b> Requerimientos funcionales, no funcionales y restricciones técnicas.</li>
             </ul>
           </section>
 
