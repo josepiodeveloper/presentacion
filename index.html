@@ -1221,57 +1221,104 @@
 
           <section data-transition="convex">
             <p class="small-title">1. Análisis y Planificación Continua</p>
-            <ul style="font-size: 0.7em; text-align: left">
-              <li><b style="color: #5d47bb">Identificación de Actores:</b> 5 roles del sistema con permisos específicos y control de acceso granular.</li>
-              <li><b style="color: #5d47bb">Análisis de Requerimientos:</b> Proceso continuo de refinamiento para definir el alcance del sistema.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/prototipo.png" alt="análisis" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-border p-6">
+                <ul class="marker:text-white!" style="font-size: 1em; text-align: left; margin: 0">
+                  <li><b>Identificación de Actores</b></li>
+                  <li><b>Análisis de Requerimientos</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Requerimientos Funcionales <br/> Portal de Usuario</p>
-            <ul style="font-size: 0.6em; text-align: left">
-              <li><b style="color: #5d47bb">Todos los usuarios:</b> Explorar catálogo, recorridos virtuales 360° (navegación tradicional, IA, voz, giroscopio), consultar disponibilidad.</li>
-              <li><b style="color: #5d47bb">No autenticados:</b> Registro, inicio de sesión, recuperación de contraseña.</li>
-              <li><b style="color: #5d47bb">Autenticados:</b> Gestionar perfil, solicitar reservas, gestionar solicitudes propias, chat en vivo, favoritos, centro de notificaciones push.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Todos los usuarios</b></li>
+                  <li><b>No autenticados</b></li>
+                  <li><b>Autenticados</b></li>
+                </ul>
+              </div>
+
+              <div class="flex-shrink-0">
+                <img src="public/requerimiento.png" alt="requerimientos" width="180" style="margin: 0" />
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Requerimientos Funcionales <br/> Panel de Administración</p>
-            <ul style="font-size: 0.6em; text-align: left">
-              <li><b style="color: #5d47bb">Administrador Lector:</b> Dashboard de reportes (solo lectura), exportar datos en Excel.</li>
-              <li><b style="color: #5d47bb">Administrador de Solicitudes:</b> Procesar solicitudes (aprobar/rechazar), chat con usuarios, vista de calendario.</li>
-              <li><b style="color: #5d47bb">Administrador de Dependencia:</b> Gestión de espacios e inventario de su dependencia, auditoría, reportes limitados.</li>
-              <li><b style="color: #5d47bb">Superadministrador:</b> Control total: usuarios, dependencias, espacios, auditoría global, configuración del sistema.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/requerimiento.png" alt="requerimientos" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Administrador Lector</b></li>
+                  <li><b>Administrador de Solicitudes</b></li>
+                  <li><b>Administrador de Dependencia</b></li>
+                  <li><b>Superadministrador</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Requerimientos No Funcionales</p>
-            <ul style="font-size: 0.65em; text-align: left">
-              <li><b style="color: #5d47bb">Arquitectura y Escalabilidad:</b> Monorepo con Turborepo, backend stateless, contenedorización con Docker.</li>
-              <li><b style="color: #5d47bb">Rendimiento:</b> Renderizado híbrido SSR/CSR, modelos 3D comprimidos (GLB), comunicación asíncrona con WebSockets.</li>
-              <li><b style="color: #5d47bb">Seguridad:</b> Contraseñas encriptadas, HTTPS obligatorio, control de acceso RBAC.</li>
-              <li><b style="color: #5d47bb">Usabilidad:</b> Gráficos 3D interactivos, diseño responsivo, múltiples métodos de control en recorridos virtuales.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Arquitectura y Escalabilidad</b></li>
+                  <li><b>Rendimiento</b></li>
+                  <li><b>Seguridad</b></li>
+                  <li><b>Usabilidad</b></li>
+                </ul>
+              </div>
+               <div class="flex-shrink-0">
+                <img src="public/usabilidad.png" alt="usabilidad" width="180" style="margin: 0" />
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">2. Diseño y Modelado de Arquitectura</p>
-            <ul style="font-size: 0.7em; text-align: left">
-              <li><b style="color: #5d47bb">Arquitectura del Sistema:</b> Monorepo con 3 capas (Cliente, Servidor, Persistencia).</li>
-              <li><b style="color: #5d47bb">Modelo de Datos:</b> 14 tablas organizadas en 3 núcleos funcionales.</li>
-              <li><b style="color: #5d47bb">Diseño de Interfaces:</b> Mapas de navegación responsive para ambas aplicaciones.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/base-de-datos.png" alt="prototipo" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-border p-6">
+                <ul class="marker:text-white!" style="font-size: 1em; text-align: left; margin: 0">
+                  <li><b>Arquitectura del Sistema</b></li>
+                  <li><b>Modelo de Datos</b></li>
+                  <li><b>Diseño de Interfaces</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Arquitectura del Sistema</p>
-            <ul style="font-size: 0.65em; text-align: left">
-              <li><b style="color: #5d47bb">Capa Cliente (Frontend):</b> Next.js - Aplicación de Usuario (pública) y Panel Administrativo (privado). Comunicación HTTPS y WebSockets.</li>
-              <li><b style="color: #5d47bb">Capa Servidor (Backend):</b> Fastify sobre Node.js - API Gateway con autenticación JWT, validación de datos y servidor WebSockets.</li>
-              <li><b style="color: #5d47bb">Capa de Persistencia:</b> PostgreSQL con Prisma ORM, MinIO/S3 para almacenamiento de objetos, Push Service (VAPID).</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Capa Cliente</b></li>
+                  <li><b>Capa Servidor</b></li>
+                  <li><b>Capa de Persistencia</b></li>
+                </ul>
+              </div>
+
+              <div class="flex-shrink-0">
+                <img src="public/information-system.png" alt="arquitectura del sistema" width="180" style="margin: 0" />
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
@@ -1305,52 +1352,91 @@
 
           <section data-transition="convex">
             <p class="small-title">3. Implementación Modular y Codificación</p>
-            <ul style="font-size: 0.65em; text-align: left">
-              <li><b style="color: #5d47bb">Tecnologías Clave:</b> Next.js (SSR/CSR), Fastify (alto rendimiento), PostgreSQL con Prisma, Three.js (recorridos 3D), MediaPipe (IA).</li>
-              <li><b style="color: #5d47bb">Desarrollo Incremental:</b> Construcción progresiva desde núcleo funcional (autenticación) hasta módulos complejos (recorridos virtuales, chat en tiempo real).</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/coding.png" alt="codificación" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-border p-6">
+                <ul class="marker:text-white!" style="font-size: 1em; text-align: left; margin: 0">
+                  <li><b>Tecnologías Clave</b></li>
+                  <li><b>Desarrollo Incremental</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Desarrollo de Módulos</p>
-            <ul style="font-size: 0.6em; text-align: left">
-              <li><b style="color: #5d47bb">Enfoque Modular:</b> Implementación estructurada en módulos independientes que reflejan los dominios funcionales del sistema.</li>
-              <li><b style="color: #5d47bb">Cronograma Consolidado:</b> Registro de 238 días de esfuerzo efectivo acumulado a lo largo de múltiples iteraciones del modelo incremental.</li>
-              <li><b style="color: #5d47bb">Mayor Inversión:</b> Componentes de alta complejidad como modelado y animación 3D (100 días) y arquitectura de recorridos virtuales (20 días).</li>
-              <li><b style="color: #5d47bb">Módulos Implementados:</b> 11 módulos backend (auth, users, spaces, booking, chat, etc.), dashboards frontend, sistema de notificaciones push y reportes.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/cubo-3d.png" alt="control de versiones" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Enfoque Modular</b></li>
+                  <li><b>Cronograma Consolidado</b></li>
+                  <li><b>Módulos Implementados</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Módulos de Funcionalidad Principal</p>
-            <ul style="font-size: 0.6em; text-align: left">
-              <li><b style="color: #5d47bb">Autenticación (auth):</b> Registro, login, recuperación de contraseña, verificación de cuentas y gestión de tokens JWT.</li>
-              <li><b style="color: #5d47bb">Espacios (space):</b> Gestión completa de espacios (CRUD), consulta de disponibilidad, filtros avanzados, favoritos y carga de imágenes.</li>
-              <li><b style="color: #5d47bb">Reservas (booking):</b> Solicitud de reservas, aprobación/rechazo por administradores, validación de conflictos, vista de calendario y gestión de estados.</li>
-              <li><b style="color: #5d47bb">Recorridos Virtuales (scene):</b> Tour 360° con navegación tradicional, control por voz, gestos con IA (MediaPipe) y giroscopio móvil.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Autenticación</b></li>
+                  <li><b>Espacios</b></li>
+                  <li><b>Reservas</b></li>
+                  <li><b>Recorridos Virtuales</b></li>
+                </ul>
+              </div>
+
+              <div class="flex-shrink-0">
+                <img src="public/integracion-de-datos.png" alt="integración" width="180" style="margin: 0" />
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Módulos de Soporte y Administración</p>
-            <ul style="font-size: 0.6em; text-align: left">
-              <li><b style="color: #5d47bb">Usuarios (users):</b> Gestión de perfiles, roles (5 niveles), asignación de permisos RBAC y administración de dependencias.</li>
-              <li><b style="color: #5d47bb">Chat en Tiempo Real (comment):</b> Comunicación bidireccional vía WebSockets entre usuarios y administradores de solicitudes.</li>
-              <li><b style="color: #5d47bb">Notificaciones Push (notification):</b> Sistema de notificaciones en tiempo real con Service Workers y protocolo VAPID.</li>
-              <li><b style="color: #5d47bb">Auditoría (auditlog):</b> Registro automático de todas las acciones críticas del sistema con trazabilidad completa.</li>
-              <li><b style="color: #5d47bb">Reportes (report):</b> Dashboard con gráficas interactivas, exportación a Excel y análisis de uso del sistema.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/tech-support.png" alt="infraestructura" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Usuarios</b></li>
+                  <li><b>Chat en Tiempo Real</b></li>
+                  <li><b>Notificaciones Push</b></li>
+                  <li><b>Auditoría</b></li>
+                  <li><b>Reportes</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">4. Pruebas, Integración y Refinamiento</p>
-            <ul style="font-size: 0.65em; text-align: left">
-              <li><b style="color: #5d47bb">Pruebas Funcionales por Roles:</b> Validación completa de los 5 roles del sistema con sus funcionalidades específicas y restricciones de acceso.</li>
-              <li><b style="color: #5d47bb">Pruebas de Usabilidad:</b> Evaluación basada en las 10 heurísticas de Nielsen mediante evaluación experta por profesores especialistas.</li>
-              <li><b style="color: #5d47bb">Pruebas de Integración:</b> Verificación de comunicación entre frontend-backend, WebSockets, notificaciones push y almacenamiento de objetos.</li>
-              <li><b style="color: #5d47bb">Pruebas de Compatibilidad:</b> Validación en múltiples navegadores (Chrome, Firefox, Safari, Edge) y dispositivos (desktop, móvil, tablet).</li>
-              <li><b style="color: #5d47bb">Refinamiento Continuo:</b> Ajustes basados en retroalimentación.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 70vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/dna-test.png" alt="pruebas" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-border p-6">
+                <ul class="marker:text-white!" style="font-size: .9em; text-align: left; margin: 0">
+                  <li><b>Pruebas Funcionales por Roles</b></li>
+                  <li><b>Pruebas de Usabilidad</b></li>
+                  <li><b>Pruebas de Integración</b></li>
+                  <li><b>Pruebas de Compatibilidad</b></li>
+                  <li><b>Refinamiento Continuo</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
 
          
@@ -1364,36 +1450,56 @@
 
           <section data-transition="convex">
             <p class="small-title">Organización de Resultados - 8 Módulos Funcionales</p>
-            <ul style="font-size: 0.75em; text-align: left">
-              <li>1. Gestión de Perfiles</li>
-              <li>2. Gestión de Espacios</li>
-              <li>3. Reservas y Solicitudes</li>
-              <li>4. Comunicación en Tiempo Real</li>
-              <li>5. Recorridos Virtuales e Interacción Avanzada</li>
-              <li>6. Reportes</li>
-              <li>7. Administración del Sistema</li>
-              <li>8. Auditoría</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Sistema Integral de Gestión de Espacios </b></li>
+                  <li><b>Monorepo: 3 aplicaciones</b></li>
+                  <li><b>8 módulos integrados</b></li>
+                  <li><b>Despliegue institucional</b></li>
+                </ul>
+              </div>
+
+              <div class="flex-shrink-0">
+                <img src="public/web-browser.png" alt="resultados" width="180" style="margin: 0" />
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Módulos Principales (1/2)</p>
-            <ul style="font-size: 0.58em; text-align: left">
-              <li><b style="color: #5d47bb">1. Gestión de Perfiles:</b> Autenticación diferenciada (Portal público con registro/recuperación vs Panel restrictivo). 5 roles: USER, SUPERADMIN, DEPENDENCY_ADMIN, REQUEST_ADMIN, READER_ADMIN. Validación JWT con sliding sessions.</li>
-              <li><b style="color: #5d47bb">2. Gestión de Espacios:</b> Catálogo con 10+ filtros combinables (tipo, dependencia, ubicación, capacidad, recursos, disponibilidad temporal). Editor gráfico de tours 360° con hotspots. Sistema de favoritos sincronizado.</li>
-              <li><b style="color: #5d47bb">3. Reservas y Solicitudes:</b> 6 estados (PENDING, APPROVED, REJECTED, CANCELLED, COMPLETED, EXPIRED). Validación automática de conflictos. Cambios de estado automáticos mediante cron jobs. Calendario interactivo mensual.</li>
-              <li><b style="color: #5d47bb">4. Comunicación en Tiempo Real:</b> Chat contextual por reserva vía WebSockets. Notificaciones push nativas (VAPID) con Service Workers. Sincronización automática de estado con TanStack Query.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Gestión de Perfiles</b></li>
+                  <li><b>Gestión de Espacios</b></li>
+                  <li><b>Reservas y Solicitudes</b></li>
+                  <li><b>Comunicación en Tiempo Real</b></li>
+                </ul>
+              </div>
+
+              <div class="flex-shrink-0">
+                <img src="public/programacion.png" alt="programación" width="180" style="margin: 0" />
+              </div>
+            </div>
           </section>
 
           <section data-transition="convex">
             <p class="small-title">Módulos Principales (2/2)</p>
-            <ul style="font-size: 0.58em; text-align: left">
-              <li><b style="color: #5d47bb">5. Recorridos Virtuales e Interacción Avanzada:</b> Renderizado WebGL con Three.js. 4 métodos de navegación: tradicional (mouse/touch), giroscopio móvil, control por voz (Web Speech API), gestos faciales y manos (MediaPipe - Edge AI).</li>
-              <li><b style="color: #5d47bb">6. Reportes:</b> Dashboard con gráficas interactivas (Chart.js). Análisis por dependencia, espacio, tipo y período temporal. Exportación a Excel. Métricas de ocupación, tendencias y recursos más solicitados.</li>
-              <li><b style="color: #5d47bb">7. Administración del Sistema:</b> Gestión de dependencias (CRUD completo). Gestión de usuarios (creación, edición, asignación de roles y dependencias). Operaciones masivas (eliminación de solicitudes por espacio). Exclusivo para SUPERADMIN.</li>
-              <li><b style="color: #5d47bb">8. Auditoría:</b> Registro automático e inmutable de operaciones críticas (creación, edición, eliminación, cambios de estado). Filtrado por tipo de acción, usuario y rango temporal. Trazabilidad completa con timestamp y responsable.</li>
-            </ul>
+            <div class="flex items-center gap-10 px-10" style="height: 50vh; justify-content: center">
+              <div class="flex-shrink-0">
+                <img src="public/programacion.png" alt="programación" width="180" style="margin: 0" />
+              </div>
+
+              <div class="box-fill px-12 py-6">
+                <ul style="font-size: 0.6em; text-align: left; margin: 0">
+                  <li><b>Recorridos Virtuales e Interacción Avanzada</b></li>
+                  <li><b>Reportes</b></li>
+                  <li><b>Administración del Sistema</b></li>
+                  <li><b>Auditoría</b></li>
+                </ul>
+              </div>
+            </div>
           </section>
         </section>
 
@@ -1426,12 +1532,43 @@
             <p class="title relative" style="font-size: 1em">
               Conclusiones
             </p>
-            <ul style="font-size: 0.65em; text-align: left">
-              <li><b style="color: #5d47bb">Arquitectura y Requerimientos:</b> El análisis exhaustivo y diseño basado en monorepo con separación Cliente-Servidor proveyó una base tecnológica robusta. PostgreSQL y Prisma ORM garantizaron rigurosidad transaccional, resolviendo reservas solapadas y duplicidad de información.</li>
-              <li><b style="color: #5d47bb">Diseño de Interfaz Adaptada por Roles:</b> Se democratizó el acceso a la información institucional mediante un entorno transparente e intuitivo, agilizando procesos que tradicionalmente consumían tiempo excesivo.</li>
-              <li><b style="color: #5d47bb">Sistema Inmersivo con IA:</b> Los recorridos virtuales 360° potenciados por reconocimiento gestual resolvieron el desconocimiento espacial previo, permitiendo decisiones informadas de forma remota.</li>
-              <li><b style="color: #5d47bb">Validación y Despliegue:</b> Las pruebas formales validaron la efectividad ante diversos perfiles, culminando con despliegue exitoso en VPS de la UCV, demostrando viabilidad operativa en entorno institucional real.</li>
-            </ul>
+            <div class="grid grid-cols-2 gap-6 px-10" style="height: 70vh; align-content: center">
+              <div class="box-border p-6">
+                <div class="flex items-center gap-4">
+                  <img src="public/intro/objetivo.png" alt="objetivos" width="70" style="margin: 0" />
+                  <p style="margin: 0; color: #5d47bb; font-weight: 900">¿Se cumplieron los objetivos?</p>
+                </div>
+                <ul style="text-align: left; margin: 15px 0 0 0; font-size: 0.55em">
+                  <li>Análisis + diseño</li>
+                  <li>Implementación modular</li>
+                  <li>Evaluación + despliegue</li>
+                </ul>
+              </div>
+
+              <div class="box-fill p-6">
+                <div class="flex items-center gap-4">
+                  <img src="public/intro/idea.png" alt="logros" width="70" style="margin: 0" />
+                  <p style="margin: 0; font-weight: 900">¿Qué se logró?</p>
+                </div>
+                <ul class="marker:text-white!" style="text-align: left; margin: 15px 0 0 0; font-size: 0.55em">
+                  <li>Centralización + automatización</li>
+                  <li>Roles + auditoría/reportes</li>
+                  <li>360° + tiempo real</li>
+                </ul>
+              </div>
+
+              <div class="box-border p-6 col-span-2">
+                <div class="flex items-center gap-4">
+                  <img src="public/cheque.png" alt="concretado" width="70" style="margin: 0" />
+                  <p style="margin: 0; color: #5d47bb; font-weight: 900">¿Qué se concretó?</p>
+                </div>
+                <ul style="text-align: left; margin: 15px 0 0 0; font-size: 0.55em">
+                  <li>Portal de usuario + panel admin + API</li>
+                  <li>8 módulos integrados</li>
+                  <li>Sistema desplegado (UCV)</li>
+                </ul>
+              </div>
+            </div>
           </section>
         </section>
 
