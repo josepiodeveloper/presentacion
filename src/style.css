@@ -1,0 +1,234 @@
+html,
+body,
+.reveal,
+.reveal .slides section {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #2c3e50;
+}
+
+.reveal .slides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.presentation h1 {
+  max-width: 500px;
+  margin: 20px auto !important;
+  font-size: 17px !important;
+  font-weight: 900 !important;
+  line-height: 1.5 !important;
+  text-transform: none !important;
+  color: #2c3e50 !important;
+}
+
+.presentation p,
+.presentation ul {
+  font-size: 14px;
+}
+
+footer {
+  text-align: left;
+}
+
+footer .names {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .date {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.reveal .slide-number {
+  bottom: 10px;
+  right: 15px;
+  padding: 8px 10px !important;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #333;
+  background-color: #5d47bb !important;
+}
+
+.reveal .controls {
+  right: auto !important;
+  left: 11em !important;
+}
+
+.reveal .controls button,
+.reveal .progress {
+  color: #5d47bb !important;
+}
+
+p,
+ul {
+  font-size: 0.6em;
+}
+
+span {
+  font-size: 0.4em;
+}
+
+.reveal ul {
+  list-style: none !important;
+}
+
+.reveal ul li::before {
+  content: '•';
+  color: #5d47bb;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.title,
+.small-title {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  background-color: #5d47bb;
+  text-transform: uppercase;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) !important;
+}
+
+.small-title {
+  font-size: 1em;
+}
+
+.ulist li {
+  font-size: 0.6em;
+  text-align: justify;
+}
+
+span {
+  text-align: left;
+}
+
+.box-fill {
+  border-radius: 30px;
+  background-color: #5d47bb;
+  color: #fff;
+}
+.box-border {
+  border: solid 2px #5d47bb;
+  border-radius: 30px;
+}
+
+.slide-number-a {
+  font-size: 12px !important;
+}
+
+.quote {
+  font-size: 0.5em !important;
+}
+
+.subitem {
+  display: block;
+  font-size: 0.9em !important;
+  margin: 5px 0 5px 50px !important;
+}
+
+.subitem .focus {
+  color: #5d47bb;
+}
+.title-element {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.title-element .subitem {
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.title-element:hover .subitem {
+  height: 30px;
+  opacity: 1;
+}
+
+/* Efecto hover para tecnologías */
+.tech-grid {
+  transition: all 0.8s ease;
+}
+
+.tech-item {
+  transition: all 0.8s ease;
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.tech-grid:has(.tech-item:hover) .tech-item:not(:hover) {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.tech-item:hover {
+  transform: scale(1.1);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.tech-item span {
+  text-align: center !important;
+}
+
+/* Estilos para enlaces de la agenda */
+.reveal ul li a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.reveal ul li a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+#magnifier-lens {
+  position: fixed;
+  width: 460px;
+  height: 460px;
+  border-radius: 10%;
+  border: 3px solid rgba(93, 71, 187, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms linear;
+}
+
+#magnifier-viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#magnifier-content {
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.magnifier-reveal {
+  width: 100%;
+  height: 100%;
+}
+
+.magnifier-reveal .slides {
+  position: relative;
+}

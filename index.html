@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabajo Especial de Grado - José Pio Montilva</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="icon" type="image/x-icon" href="/public/cover/ciencias.png" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Portada -->
+        <section class="presentation">
+          <header>
+            <img src="public/cover/ucv.png" alt="logo_ucv" />
+            <p>
+              Universidad Central de Venezuela <br />
+              Facultad de Ciencias
+              <br />
+              Escuela de Computación<br />
+              Trabajo Especial de Grado<br />
+            </p>
+            <img src="public/cover/ciencias.png" alt="logo_ciencias" />
+          </header>
+          <h1>
+            Aplicación web para la gestión de espacios físicos de la Facultad de Ciencias de la Universidad Central de Venezuela
+          </h1>
+          <footer>
+            <div class="names">
+              <p class="author">
+                Autor: <br />
+                José Pio Montilva Cova
+              </p>
+              <p class="tutor">
+                Tutora: <br />
+                Profa. Yosly Hernández Bieliukas
+              </p>
+            </div>
+            <p class="date">Caracas, Marzo de 2026</p>
+          </footer>
+        </section>
+
+        <!-- Agenda -->
+        <section data-transition="slide-in convex-out">
+          <p class="small-title">Agenda</p>
+          <div class="flex justify-between items-center">
+            <ul>
+              <li><a href="#/2">Introducción</a></li>
+              <li><a href="#/3">Contexto de la investigación</a></li>
+              <li><a href="#/4">Problema de investigación</a></li>
+              <li><a href="#/5">Objetivos y Justificación</a></li>
+              <li><a href="#/6">Fundamentos teóricos</a></li>
+              <li><a href="#/8">Metodología de desarrollo</a></li>
+              <li><a href="#/9">Resultados</a></li>
+              <li><a href="#/11">Conclusiones</a></li>
+              <li><a href="#/12">Recomendaciones</a></li>
+              <li><a href="#/13">Referencias</a></li>
+            </ul>
+            <img src="public/tablet.png" alt="tablet" width="200" />
+          </div>
+        </section>
+
+        <!-- Introduccion -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative">Introducción</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="title relative" style="font-size: 1em">Introducción</p>
+            <div class="flex flex-col gap-4">
+              <ul style="font-size: 0.65em; text-align: left">
+                <li><b style="color: #5d47bb">Desafío actual:</b> Evolucionar para ofrecer entornos óptimos de docencia, investigación y extensión.</li>
+                <li><b style="color: #5d47bb">Infraestructura clave:</b> Aulas, laboratorios y auditorios requieren coordinación para su aprovechamiento óptimo.</li>
+                <li><b style="color: #5d47bb">Necesidad:</b> Información oportuna de disponibilidad, capacidades y recursos para planificar sin conflictos.</li>
+                <li><b style="color: #5d47bb">Potencial tecnológico:</b> Web, visualización inmersiva e IA para centralizar información y apoyar decisiones.</li>
+              </ul>
+              <div class="flex justify-center">
+                <img src="public/intro/idea.png" alt="idea" width="180" />
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative">Contexto de la investigación</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="title relative" style="font-size: 1em">Contexto de la investigación</p>
+            <div class="flex flex-col gap-4">
+              <ul style="font-size: 0.65em; text-align: left">
+                <li><b style="color: #5d47bb">Institución:</b> Facultad de Ciencias de la UCV, orientada a docencia de pregrado/postgrado e investigación científica.</li>
+                <li><b style="color: #5d47bb">Estructura:</b> 5 escuelas (Biología, Computación, Física, Matemática y Química) y 4 institutos (Biología Experimental, Ciencias de la Tierra, Ciencia y Tecnología de Alimentos, y Zoología y Ecología Tropical).</li>
+                <li><b style="color: #5d47bb">Infraestructura:</b> decenas de espacios (edificios de aulas, laboratorios especializados y auditorios de gran aforo) distribuidos en el recinto.</li>
+                <li><b style="color: #5d47bb">Demanda:</b> alta frecuencia diaria de solicitudes para actividades académicas, investigativas y de extensión.</li>
+                <li><b style="color: #5d47bb">Referencia:</b> recintos como el Auditorio Dr. Tobías Lasser para eventos institucionales.</li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <!-- Problema de investigación -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title">Problema de investigación</p>
+          </section>
+          <section data-transition="convex">
+            <p class="small-title">Planteamiento del Problema</p>
+            <ul style="font-size: 0.75em; text-align: left">
+              <li><b style="color: #5d47bb">Gestión descentralizada:</b> La administración de los espacios físicos recae en cada dependencia de forma independiente.</li>
+              <li><b style="color: #5d47bb">Proceso manual:</b> Solicitudes presenciales/correos y verificación en calendarios físicos o herramientas desconectadas.</li>
+              <li><b style="color: #5d47bb">Ausencia de sistema unificado:</b> No existe un catálogo público con disponibilidad en tiempo real ni métricas confiables de uso.</li>
+              <li><b style="color: #5d47bb">Consecuencias directas:</b>
+                <ul style="margin-left: 20px">
+                  <li>Duplicidad de reservas y solapamiento de eventos.</li>
+                  <li>Falta de información pública sobre la disponibilidad y capacidad.</li>
+                  <li>Dificultades de coordinación y retrasos comunicacionales.</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section data-transition="convex">
+            <p class="small-title">Problemática Inicial</p>
+            <p
+              class="text-left"
+              style="font-size: 0.4em; margin: 0 0 10px 20px"
+            >
+              Cada dependencia maneja su proceso de solicitud de reservas de
+              forma manual:
+            </p>
+            <div class="box-border p-1">
+              <img
+                src="public/diagrama-flujo-anterior.png"
+                alt="situacionactual"
+                width="26%"
+              />
+            </div>
+          </section>
+          <section data-transition="convex">
+            <p class="small-title">Pregunta de Investigación</p>
+            <div class="box-fill p-8 mx-10">
+              <p class="text-justify" style="font-size: 0.85em; color: #fff">
+                ¿Qué <b>solución tecnológica</b> podría sistematizar y automatizar el proceso de gestión de los espacios físicos de las dependencias de la Facultad de Ciencias de la UCV, con el propósito de centralizar las operaciones y minimizar los errores logísticos?
+              </p>
+            </div>
+            <div class="flex justify-center mt-4">
+              <img src="public/debilidad.png" alt="debilidad" width="180" />
+            </div>
+          </section>
+        </section>
+
+        <!-- Objetivos y Justificación -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title">Objetivos y Justificación</p>
+          </section>
+          <section data-transition="convex">
+            <p class="small-title">Objetivo General</p>
+            <p class="text-justify" style="font-size: 0.85em">
+              Desarrollar la aplicación web <b style="color: #5d47bb">SIGE</b>, orientada a centralizar y automatizar la administración de la infraestructura física de la Facultad de Ciencias.
+            </p>
+            <div class="flex justify-center">
+              <img src="public/pestanas.png" alt="pestanas" width="200" />
+            </div>
+          </section>
+          <section data-transition="convex">
+            <p class="small-title">Objetivos Específicos</p>
+            <ul style="margin: 10px 0; font-size: 0.6em; text-align: left">
+              <li>Analizar los requerimientos funcionales y no funcionales del sistema.</li>
+              <li>Diseñar la arquitectura del sistema y el modelo de la base de datos.</li>
+              <li>Diseñar la interfaz de usuario enfocada en la usabilidad (UX/UI) adaptada a los diferentes roles.</li>
+              <li>Desarrollar los módulos funcionales de gestión de espacios, procesamiento de reservas, panel administrativo y control de usuarios.</li>
+              <li>Integrar un sistema inmersivo de recorridos virtuales interactivos 360°.</li>
+              <li>Evaluar la funcionalidad y usabilidad mediante pruebas formales con usuarios.</li>
+              <li>Desplegar la aplicación web en un VPS de la UCV.</li>
+            </ul>
+            <div class="flex justify-center gap-15">
+              <img src="public/interfaz-ux.png" alt="interfaz-ux" width="200" />
+              <img src="public/base-de-datos.png" alt="base-de-datos" width="200" />
+            </div>
+          </section>
+          <section data-transition="convex">
+            <p class="small-title">Justificación</p>
+            <ul style="font-size: 0.7em; text-align: left">
+              <li><b style="color: #5d47bb">Práctica:</b> Centraliza el inventario en un repositorio digital único, validando disponibilidad en tiempo real y reduciendo conflictos logísticos.</li>
+              <li><b style="color: #5d47bb">Tecnológica:</b> Digitaliza procesos administrativos con recorridos virtuales 360° y comunicación bidireccional asíncrona.</li>
+              <li><b style="color: #5d47bb">Institucional:</b> Provee un sistema seguro, escalable y con control de accesos basado en roles, generando métricas confiables para la planificación académica.</li>
+              <li><b style="color: #5d47bb">Social:</b> Mejora la experiencia de la comunidad universitaria al permitir la consulta, visualización y gestión  transparente de espacios.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Alcance Funcional - Módulos</p>
+            <div class="flex flex-col gap-2 mt-3">
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ✅ <strong>Autenticación y Control de Acceso 🔐</strong>:
+                <p class="subitem">
+                  🔹 Mecanismos de seguridad para <b class="focus">registro e inicio de sesión</b>, garantizando acceso según rol.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ✅ <strong>Gestión de Inventario y Espacios 🏛️</strong>:
+                <p class="subitem">
+                  🔹 Administración digital de infraestructura: <b class="focus">dependencias, espacios y recursos</b>.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ✅ <strong>Recorridos Virtuales e Inmersión 🌐</strong>:
+                <p class="subitem">
+                  🔹 Exploración visual 360° con <b class="focus">reconocimiento de gestos (IA)</b> para control sin periféricos.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ✅ <strong>Gestión de Reservas 📅</strong>:
+                <p class="subitem">
+                  🔹 Flujo centralizado: <b class="focus">calendarios interactivos</b> y aprobación/rechazo de solicitudes.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ✅ <strong>Comunicación en Tiempo Real 💬</strong>:
+                <p class="subitem">
+                  🔹 Sistema de <b class="focus">mensajería (chat) y notificaciones automáticas</b> sobre el estado de solicitudes.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ✅ <strong>Auditoría y Reportes 📈</strong>:
+                <p class="subitem">
+                  🔹 Estadísticas de uso y <b class="focus">registro histórico inalterable</b> de acciones administrativas.
+                </p>
+              </span>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Alcance Funcional - Roles</p>
+            <div class="flex flex-col gap-2 mt-3">
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                👤 <strong>Usuario General (Público)</strong>:
+                <p class="subitem">
+                  🔹 Acceso libre para consultar catálogo de espacios y realizar recorridos virtuales.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                🏛️ <strong>Usuario de la Comunidad</strong>:
+                <p class="subitem">
+                  🔹 Miembros autenticados: generan solicitudes de reserva, gestionan perfil y se comunican vía chat.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                👁️ <strong>Administrador Lector</strong>:
+                <p class="subitem">
+                  🔹 Permisos de visualización: consulta reportes y calendarios sin modificar configuraciones.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ✅ <strong>Administrador de Solicitudes</strong>:
+                <p class="subitem">
+                  🔹 Procesa (aprueba/rechaza) solicitudes de reserva y gestiona comunicación vía chat.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                🏢 <strong>Administrador de Dependencia</strong>:
+                <p class="subitem">
+                  🔹 Control total sobre espacios y recursos de su dependencia específica.
+                </p>
+              </span>
+
+              <span class="text-justify block title-element" style="font-size: 0.5em">
+                ⚙️ <strong>Superadministrador</strong>:
+                <p class="subitem">
+                  🔹 Control global: configuración del sistema, gestión de usuarios/roles y acceso irrestricto.
+                </p>
+              </span>
+            </div>
+          </section>
+        </section>
+
+        <!-- Fundamentos teóricos -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative">Fundamentos teóricos</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="title relative" style="font-size: 1em">
+              Aplicaciones Web
+            </p>
+            <div class="flex justify-evenly items-center">
+              <div class="flex flex-col gap-3">
+                <span class="text-justify block max-w-[300px]">
+                  Una aplicación web es un
+                  <strong style="color: #5d47bb"
+                    >software accesible desde un navegador</strong
+                  >
+                  que permite interactuar con datos y funciones en línea
+                  <strong style="color: #5d47bb">sin</strong> necesidad de
+                  <strong style="color: #5d47bb">instalación local</strong>.
+                </span>
+                <div class="flex flex-col flex-1/2 items-center">
+                  <img
+                    src="public/emparejamiento.png"
+                    alt="emparejamiento"
+                    width="200"
+                  />
+                  <span class="text-[0.4em]" style="text-align: center"
+                    >Accesibilidad</span
+                  >
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-2 grid-rows-2 gap-4 items-center justify-center"
+              >
+                <div class="flex flex-col items-center">
+                  <img src="public/servidor.png" alt="servidor" width="150" />
+                  <span class="text-[0.4em]" style="text-align: center"
+                    >Interoperabilidad</span
+                  >
+                </div>
+                <div class="flex flex-col items-center">
+                  <img
+                    src="public/centro-de-datos.png"
+                    alt="centro-de-datos"
+                    width="150"
+                  />
+                  <span class="text-[0.4em]" style="text-align: center"
+                    >Escalabilidad</span
+                  >
+                </div>
+                <div class="flex flex-col items-center">
+                  <img
+                    src="public/mantenimiento-de-base-de-datos.png"
+                    alt="mantenimiento-de-base-de-datos"
+                    width="150"
+                  />
+                  <span class="text-[0.4em]" style="text-align: center"
+                    >Fácil mantenimiento</span
+                  >
+                </div>
+                <div class="flex flex-col items-center">
+                  <img
+                    src="public/motor-de-busqueda-web.png"
+                    alt="motor-web"
+                    width="150"
+                  />
+                  <span class="text-[0.4em]" style="text-align: center"
+                    >Independencia</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Arquitectura Cliente - Servidor</p>
+            <div
+              class="flex items-center justify-between"
+              style="padding: 0 10%"
+            >
+              <div class="flex-1/3">
+                <img src="public/servblock.png" alt="servblock" />
+              </div>
+
+              <div class="flex flex-col flex-1/3 items-center justify-between">
+                <img src="public/sernube.png" alt="sernube" width="150" />
+                <span class="text-center block box-fill p-5"
+                  ><b>Petición - Respuesta</b></span
+                >
+                <img
+                  src="public/servidor-de-cliente.png"
+                  alt="servidor-de-cliente"
+                  width="150"
+                />
+              </div>
+
+              <div class="flex-1/3">
+                <img src="public/csb.png" alt="csb" />
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">API</p>
+            <span class="text-left block">
+              Una
+              <strong style="color: #5d47bb"
+                >interfaz de programación de aplicaciones</strong
+              >
+              es un software intermediario que permite que las aplicaciones se
+              comuniquen entre sí
+              <span style="font-size: 0.85em">(IBM, s.f.)</span>.
+            </span>
+            <div>
+              <img src="public/api.png" alt="api" width="750" />
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Frameworks</p>
+            <span class="text-left block mb-4">
+              <strong style="color: #5d47bb"
+                >Herramientas que simplifican</strong
+              >
+              el desarrollo de aplicaciones web.
+            </span>
+            <div class="flex items-center justify-between gap-8">
+              <div class="box-border flex flex-col flex-1/3 gap-2 p-9">
+                <p style="margin: 0 0 10px 0; font-size: 0.5em; color: #5d47bb">
+                  Frontend
+                </p>
+                <span>• Next.js ⚛️</span>
+                <span>• Angular 🅰️</span>
+                <span>• Vue.js 💚</span>
+              </div>
+              <div class="box-fill flex flex-col flex-1/3 gap-2 p-9">
+                <p style="margin: 0 0 10px 0; font-size: 0.5em">
+                  ¿Por qué usar Frameworks?
+                </p>
+                <span>• Estructura y organización 📂</span>
+                <span>• Seguridad integrada 🔑</span>
+                <span>• Desarrollo más rápido 🚀</span>
+                <span>• Mayor escalabilidad 🌍</span>
+              </div>
+              <div class="box-border flex flex-col flex-1/3 gap-2 p-9">
+                <p style="margin: 0 0 10px 0; font-size: 0.5em; color: #5d47bb">
+                  Backend
+                </p>
+                <span>• Fastify ⚡</span>
+                <span>• Django 🐍</span>
+                <span>• Spring Boot 🌱</span>
+              </div>
+            </div>
+
+            <div></div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Patrón MVC Distribuido</p>
+            <div class="flex items-center justify-between gap-5">
+              <div
+                class="box-border flex flex-col flex-1/2 gap-2 p-9 min-h-[320px]"
+              >
+                <p style="color: #5d47bb; font-weight: 900">Componentes</p>
+                <span class="text-left">
+                  🗄️ <strong>Modelo (Backend + BD)</strong> → Prisma ORM + PostgreSQL: esquemas de datos, reglas de negocio, integridad referencial
+                </span>
+                <span class="text-left">
+                  🖥️ <strong>Vista (Frontend Separado)</strong> → Next.js: SSR para portal público, CSR para panel administrativo
+                </span>
+                <span class="text-left">
+                  🎮 <strong>Controlador (API Backend)</strong> → Fastify: procesa solicitudes, coordina lógica de negocio, autorización por roles
+                </span>
+              </div>
+              <div
+                class="box-border flex flex-col flex-1/2 gap-2 p-9 min-h-[320px]"
+              >
+                <p style="color: #5d47bb; font-weight: 900">Ventajas</p>
+                <span class="text-left">
+                  🔒 <strong>Separación de responsabilidades:</strong> Cada capa optimizada para su función específica
+                </span>
+                <span class="text-left">
+                  🔄 <strong>Evolución independiente:</strong> Cambios en políticas sin afectar UI ni estructura de datos
+                </span>
+                <span class="text-left">
+                  🛡️ <strong>Seguridad por capas:</strong> Lógica crítica protegida en el servidor, inaccesible desde navegadores
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Monorepositorio</p>
+            <span class="text-left block mb-4"
+              >Estrategia de arquitectura donde múltiples proyectos relacionados se almacenan en un único repositorio de control de versiones.</span
+            >
+
+            <div class="flex items-center justify-between gap-5">
+              <div
+                class="box-border flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #5d47bb; font-weight: 900">
+                  Ventajas en SIGE
+                </p>
+                <span class="text-left">📦 Sincronización de modelos de datos</span>
+                <span class="text-left">♻️ Reutilización de componentes UI</span>
+                <span class="text-left">⚡ Gestión atómica de cambios</span>
+                <span class="text-left">🔄 Dependencias compartidas</span>
+              </div>
+              <div class="flex-1/3 overflow-hidden rounded-2xl">
+                <img
+                  class="object-cover rounded-4xl"
+                  src="public/monorepo.png"
+                  alt="monorepo"
+                  height="200"
+                />
+              </div>
+              <div
+                class="box-border flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #5d47bb; font-weight: 900">
+                  Herramientas
+                </p>
+                <span class="text-left">🚀 Turborepo ➡️ Build system incremental</span>
+                <span class="text-left">📦 pnpm ➡️ Gestor de dependencias eficiente</span>
+                <span class="text-left">🔧 Workspaces ➡️ Múltiples proyectos</span>
+                <span class="text-left">⚙️ TypeScript ➡️ Tipos compartidos</span>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">WebSockets</p>
+            <span class="text-left block mb-4"
+              >Protocolo de comunicación <strong style="color: #5d47bb">bidireccional</strong> que permite comunicación en tiempo real entre cliente y servidor.</span
+            >
+
+            <div class="flex items-center justify-between gap-5">
+              <div
+                class="box-fill flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #fff; font-weight: 900">
+                  Aplicaciones en SIGE
+                </p>
+                <span class="text-left">💬 Chat contextual por reserva</span>
+                <span class="text-left">🔔 Notificaciones instantáneas</span>
+                <span class="text-left">📅 Actualizaciones de disponibilidad</span>
+                <span class="text-left">🔄 Sincronización en vivo</span>
+              </div>
+              <div class="flex-1/3">
+                <img
+                  class="object-contain"
+                  src="public/websockets.png"
+                  alt="websocket"
+                  height="300"
+                />
+              </div>
+              <div
+                class="box-fill flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #fff; font-weight: 900">
+                  Ventajas
+                </p>
+                <span class="text-left">⚡ Comunicación full-duplex</span>
+                <span class="text-left">🔌 Conexión persistente</span>
+                <span class="text-left">📉 Menor latencia que HTTP</span>
+                <span class="text-left">🚀 Eventos en tiempo real</span>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Edge AI</p>
+            <span class="text-left block mb-4"
+              >Inteligencia Artificial ejecutada <strong style="color: #5d47bb">en el cliente</strong> para reconocimiento de gestos y navegación natural.</span
+            >
+
+            <div class="flex items-center justify-between gap-5">
+              <div
+                class="box-border flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #5d47bb; font-weight: 900">
+                  Características
+                </p>
+                <span class="text-left">👋 Reconocimiento de gestos de mano</span>
+                <span class="text-left">😊 Detección facial</span>
+                <span class="text-left">🎯 Procesamiento local</span>
+                <span class="text-left">🔒 Privacidad garantizada</span>
+              </div>
+              <div class="flex-1/3">
+                <img
+                  class="object-cover rounded-4xl"
+
+                  src="public/edge.png"
+                  alt="edge-ai"
+                  height="300"
+                />
+              </div>
+              <div
+                class="box-border flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #5d47bb; font-weight: 900">
+                  Uso en SIGE
+                </p>
+                <span class="text-left">🌐 Navegación en recorridos 360°</span>
+                <span class="text-left">♿ Accesibilidad mejorada</span>
+                <span class="text-left">🎮 Interfaz natural e inmersiva</span>
+                <span class="text-left">⚡ Sin carga en el servidor</span>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Bases de datos SQL</p>
+            <span class="text-left block mb-4"
+              >Modelo de bases de datos relacionales basado en tablas.</span
+            >
+
+            <div class="flex items-center justify-between gap-5">
+              <div
+                class="box-fill flex flex-col flex-1/3 gap-2 p-5 min-h-[250px]"
+              >
+                <p style="margin-top: 0; color: #fff; font-weight: 900">
+                  Ventajas
+                </p>
+                <span class="text-left">🔒 Integridad de datos (ACID)</span>
+                <span class="text-left">📊 Relaciones entre tablas</span>
+                <span class="text-left">📝 Consultas complejas con SQL</span>
+                <span class="text-left"
+                  >✅ Transacciones confiables</span
+                >
+              </div>
+              <div class="flex-1/3">
+                <img src="public/bd.png" alt="bd" height="300" />
+              </div>
+              <div
+                class="box-fill flex flex-col flex-1/3 gap-2 p-5 min-h-[250px]"
+              >
+                <p style="margin-top: 0; color: #fff; font-weight: 900">
+                  Tipos
+                </p>
+                <span class="text-left">PostgreSQL ➡️ Open Source 🐋</span>
+                <span class="text-left">MySQL ➡️ Popular y rápido ⚡</span>
+                <span class="text-left">SQL Server ➡️ Microsoft 📊</span>
+                <span class="text-left">Oracle ➡️ Empresarial 👨‍💼</span>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Tecnologías 3D en Apps Web</p>
+            <span class="text-left block mb-4"
+              >Uso de gráficos 3D en
+              <strong style="color: #5d47bb">aplicaciones web</strong> para
+              crear experiencias interactivas.</span
+            >
+
+            <div class="flex items-center justify-between gap-5">
+              <div
+                class="box-border flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #5d47bb; font-weight: 900">
+                  Aplicaciones
+                </p>
+                <span class="text-left">🏛️ Tours virtuales</span>
+                <span class="text-left"
+                  >🛒 Visualización de productos en e-commerce</span
+                >
+                <span class="text-left">🎮 Videojuegos en navegador</span>
+                <span class="text-left"
+                  >📍 Mapas y simulaciones interactivas</span
+                >
+              </div>
+              <div class="flex-1/3">
+                <img
+                  src="public/realidad-virtual.png"
+                  alt="realidad-virtual.png"
+                  height="300"
+                />
+              </div>
+              <div
+                class="box-border flex flex-col flex-1/3 gap-2 p-5 min-h-[300px]"
+              >
+                <p style="margin-top: 0; color: #5d47bb; font-weight: 900">
+                  Tipos
+                </p>
+                <span class="text-left"
+                  >🌍 WebGL ➡️ API de gráficos 3D en navegadores</span
+                >
+                <span class="text-left"
+                  >🎮 Three.js ➡️ Renderizado 3D en WebGL</span
+                >
+                <span class="text-left"
+                  >🕹️ Babylon.js ➡️ Motor gráfico 3D avanzado</span
+                >
+                <span class="text-left"
+                  >🕶️ WebVR ➡️ Realidad Virtual en la web</span
+                >
+              </div>
+            </div>
+          </section>
+          <section data-transition="convex">
+            <p class="small-title">Control de versiones</p>
+            <span class="text-left block mb-4"
+              >Sistema que registra modificaciones en archivos y permite
+              restaurar versiones anteriores.</span
+            >
+
+            <div class="flex items-center justify-center">
+              <div class="flex justify-center flex-1/2 w-[100%]">
+                <div
+                  class="box-fill flex flex-col flex-1/2 gap-2 max-w-[250px] p-5"
+                >
+                  <p style="margin: 5px 0; color: #fff; font-weight: 900">
+                    Beneficios
+                  </p>
+                  <span>🕒 Historial de cambios</span>
+                  <span>👥 Colaboración en equipo</span>
+                  <span>🔄 Recuperación de versiones</span>
+                  <span>🚀 Integración con CI/CD</span>
+                </div>
+              </div>
+              <div class="flex-1/2">
+                <img
+                  src="public/control-de-versiones.png"
+                  alt="control-de-versiones"
+                  height="300"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">VPS</p>
+            <span class="text-left block mb-4"
+              >Un
+              <strong style="color: #5d47bb">servidor virtual privado</strong>
+              es una maquina que aloja todo el software y los datos necesarios
+              para ejecutar una aplicación o un sitio web. Divide un servidor
+              físico en múltiples entornos virtuales independientes
+              <span style="font-size: 0.8em">(Amazon Web Services, s.f.) </span
+              >.</span
+            >
+
+            <div class="flex items-center justify-center">
+              <div class="flex justify-center flex-1/2 w-[100%]">
+                <div
+                  class="box-fill flex flex-col flex-1/2 gap-2 max-w-[400px] p-5"
+                >
+                  <p style="margin: 5px 0; color: #fff; font-weight: 900">
+                    Ventajas
+                  </p>
+                  <span>⚡ Mejor rendimiento que un hosting compartido</span>
+                  <span>🔒 Mayor seguridad y control</span>
+                  <span>🔧 Posibilidad de personalización</span>
+                  <span>📈 Escalabilidad según demanda</span>
+                </div>
+              </div>
+              <div class="flex-1/2">
+                <img
+                  src="public/servidor-en-la-nube.png"
+                  alt="servidor-nube"
+                  height="300"
+                />
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Tecnologias de desarrollo -->
+
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative" style="font-size: 1.3em">
+              Tecnologías de desarrollo
+            </p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Tecnologías de Orquestación</p>
+            <div
+              class="tech-grid grid grid-cols-4 gap-[50px] place-items-center mt-[50px]"
+            >
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/pnpm.png"
+                    alt="pnpm"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>pnpm</b></p>
+                <span>Gestor de dependencias</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/turbo.png"
+                    alt="turborepo"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Turborepo</b></p>
+                <span>Build system para monorepos</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/git.png"
+                    alt="git"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Git</b></p>
+                <span>Control de versiones</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/compose.webp"
+                    alt="docker-compose"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Docker Compose</b></p>
+                <span>Orquestación de contenedores</span>
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Tecnologías del lado del Cliente</p>
+            <div
+              class="tech-grid grid grid-cols-4 gap-[50px] place-items-center mt-[50px]"
+            >
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/html-css.png"
+                    alt="html5"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>HTML/CSS</b></p>
+                <span class="block w-full text-center">Estructura y estilos</span>
+              </div>
+
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/js.png"
+                    alt="javascript"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>JavaScript</b></p>
+                <span class="block w-full text-center">Interactividad y lógica</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/ts.png"
+                    alt="typescript"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>TypeScript</b></p>
+                <span class="block w-full text-center">JS con tipado estático</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/react.png"
+                    alt="react"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>React</b></p>
+                <span class="block w-full text-center">Biblioteca para UI</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/nextjs.png"
+                    alt="nextjs"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Next.js</b></p>
+                <span class="block w-full text-center">Framework de React</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/threejs.png"
+                    alt="threejs"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Three.js</b></p>
+                <span class="block w-full text-center">3D en WebGL</span>
+              </div>
+
+               <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/mediapipe.png"
+                    alt="mediapipe"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>MediaPipe</b></p>
+                <span class="block w-full text-center">Visión Artificial</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/gsap.svg"
+                    alt="gsap"
+                    width="60"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>GSAP</b></p>
+                <span class="block w-full text-center">Animaciones web</span>
+              </div>
+
+              
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/motion.webp"
+                    alt="framer-motion"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Framer Motion</b></p>
+                <span class="block w-full text-center">Animaciones de transición</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/tailwind.png"
+                    alt="tailwind"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Tailwind CSS</b></p>
+                <span class="block w-full text-center">Framework de utilidades CSS</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/zustand.png"
+                    alt="zustand"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Zustand</b></p>
+                <span class="block w-full text-center">Estado global minimalista</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/tanstack.png"
+                    alt="tanstack-query"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>TanStack Query</b></p>
+                <span class="block w-full text-center">Estado del servidor</span>
+              </div>
+
+            </div>
+          </section>
+
+       
+          <section data-transition="convex">
+            <p class="small-title">Tecnologías del lado del Servidor</p>
+            <div
+              class="tech-grid grid grid-cols-4 gap-[50px] place-items-center mt-[50px]"
+            >
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/node.png"
+                    alt="nodejs"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Node.js</b></p>
+                <span class="block w-full text-center">JavaScript en el servidor</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/fastify.svg"
+                    alt="fastify"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Fastify</b></p>
+                <span class="block w-full text-center">Framework de Node.js</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/postgre.webp"
+                    alt="postgresql"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>PostgreSQL</b></p>
+                <span class="block w-full text-center">Base de datos SQL</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/prisma.svg"
+                    alt="prisma"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Prisma</b></p>
+                <span class="block w-full text-center">ORM para Node.js</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/minio.png"
+                    alt="minio"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>MinIO</b></p>
+                <span class="block w-full text-center">Almacenamiento de objetos</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/docker.png"
+                    alt="docker"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>Docker</b></p>
+                <span class="block w-full text-center">Contenedorización</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/typebox.png"
+                    alt="typebox"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>TypeBox</b></p>
+                <span class="block w-full text-center">Validación de esquemas JSON</span>
+              </div>
+
+              <div class="tech-item flex flex-col items-center">
+                <div class="grid place-items-center w-[80px] h-[80px]">
+                  <img
+                    src="public/tecnologias/websocket.png"
+                    alt="websocket"
+                    width="80"
+                    style="margin: 0"
+                  />
+                </div>
+                <p style="margin: 0"><b>WebSockets</b></p>
+                <span class="block w-full text-center">Comunicación en tiempo real</span>
+              </div>
+            </div>
+          </section>
+
+  
+        </section>
+
+        <!-- Metodología -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative">Metodología</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Modelo de Desarrollo</p>
+            <ul style="font-size: 0.7em; text-align: left">
+              <li><b style="color: #5d47bb">Modelo Incremental e Iterativo:</b> Desarrollo evolutivo mediante iteraciones que producen versiones sucesivas (incrementos).</li>
+              <li><b style="color: #5d47bb">Gestión Ágil con Kanban:</b> Visualización del flujo de trabajo mediante tablero Kanban (Por hacer, En desarrollo, Pruebas, Completado).</li>
+              <li><b style="color: #5d47bb">Ventajas:</b> Flexibilidad para priorizar tareas críticas, gestión de cambios tecnológicos y ritmo constante sin sprints fijos.</li>
+            </ul>
+            <div class="flex justify-center mt-4">
+              <img src="public/kanban.png" alt="kanban" width="300" />
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Fases del Ciclo de Desarrollo</p>
+            <div class="flex items-center justify-between gap-8 px-10" style="height: 70vh">
+              <ul style="font-size: 0.6em; text-align: left">
+                <li>Análisis y Planificación Continua</li>
+                <li>Diseño y Modelado de Arquitectura</li>
+                <li>Implementación Modular y Codificación</li>
+                <li>Pruebas, Integración y Refinamiento</li>
+              </ul>
+              <div class="flex-shrink-0" style="height: 100%; display: flex; align-items: center">
+                <img style="max-height: 100%; width: auto; object-fit: contain" src="public/fases.png" alt="fases del ciclo" />
+              </div>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">1. Análisis y Planificación Continua</p>
+            <ul style="font-size: 0.7em; text-align: left">
+              <li><b style="color: #5d47bb">Identificación de Actores:</b> 5 roles del sistema con permisos específicos y control de acceso granular.</li>
+              <li><b style="color: #5d47bb">Análisis de Requerimientos:</b> Proceso continuo de refinamiento para definir el alcance del sistema.</li>
+              <li><b style="color: #5d47bb">Contenido:</b> Requerimientos funcionales, no funcionales y restricciones técnicas.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Requerimientos Funcionales <br/> Portal de Usuario</p>
+            <ul style="font-size: 0.6em; text-align: left">
+              <li><b style="color: #5d47bb">Todos los usuarios:</b> Explorar catálogo, recorridos virtuales 360° (navegación tradicional, IA, voz, giroscopio), consultar disponibilidad.</li>
+              <li><b style="color: #5d47bb">No autenticados:</b> Registro, inicio de sesión, recuperación de contraseña.</li>
+              <li><b style="color: #5d47bb">Autenticados:</b> Gestionar perfil, solicitar reservas, gestionar solicitudes propias, chat en vivo, favoritos, centro de notificaciones push.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Requerimientos Funcionales <br/> Panel de Administración</p>
+            <ul style="font-size: 0.6em; text-align: left">
+              <li><b style="color: #5d47bb">Administrador Lector:</b> Dashboard de reportes (solo lectura), exportar datos en Excel.</li>
+              <li><b style="color: #5d47bb">Administrador de Solicitudes:</b> Procesar solicitudes (aprobar/rechazar), chat con usuarios, vista de calendario.</li>
+              <li><b style="color: #5d47bb">Administrador de Dependencia:</b> Gestión de espacios e inventario de su dependencia, auditoría, reportes limitados.</li>
+              <li><b style="color: #5d47bb">Superadministrador:</b> Control total: usuarios, dependencias, espacios, auditoría global, configuración del sistema.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Requerimientos No Funcionales</p>
+            <ul style="font-size: 0.65em; text-align: left">
+              <li><b style="color: #5d47bb">Arquitectura y Escalabilidad:</b> Monorepo con Turborepo, backend stateless, contenedorización con Docker.</li>
+              <li><b style="color: #5d47bb">Rendimiento:</b> Renderizado híbrido SSR/CSR, modelos 3D comprimidos (GLB), comunicación asíncrona con WebSockets.</li>
+              <li><b style="color: #5d47bb">Seguridad:</b> Contraseñas encriptadas, HTTPS obligatorio, control de acceso RBAC.</li>
+              <li><b style="color: #5d47bb">Usabilidad:</b> Gráficos 3D interactivos, diseño responsivo, múltiples métodos de control en recorridos virtuales.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">2. Diseño y Modelado de Arquitectura</p>
+            <ul style="font-size: 0.7em; text-align: left">
+              <li><b style="color: #5d47bb">Arquitectura del Sistema:</b> Monorepo con 3 capas (Cliente, Servidor, Persistencia).</li>
+              <li><b style="color: #5d47bb">Modelo de Datos:</b> 14 tablas organizadas en 3 núcleos funcionales.</li>
+              <li><b style="color: #5d47bb">Diseño de Interfaces:</b> Mapas de navegación responsive para ambas aplicaciones.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Arquitectura del Sistema</p>
+            <ul style="font-size: 0.65em; text-align: left">
+              <li><b style="color: #5d47bb">Capa Cliente (Frontend):</b> Next.js - Aplicación de Usuario (pública) y Panel Administrativo (privado). Comunicación HTTPS y WebSockets.</li>
+              <li><b style="color: #5d47bb">Capa Servidor (Backend):</b> Fastify sobre Node.js - API Gateway con autenticación JWT, validación de datos y servidor WebSockets.</li>
+              <li><b style="color: #5d47bb">Capa de Persistencia:</b> PostgreSQL con Prisma ORM, MinIO/S3 para almacenamiento de objetos, Push Service (VAPID).</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Diagrama de Arquitectura</p>
+            <div class="flex justify-center items-center" style="height: 65vh">
+              <img style="max-height: 100%; max-width: 90%; object-fit: contain" src="public/arquitectura.png" alt="diagrama de arquitectura del sistema" />
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Modelo Entidad-Relación</p>
+            <div class="flex justify-center items-center" style="height: 65vh">
+              <img style="max-height: 100%; max-width: 100%; object-fit: contain; cursor: zoom-in;" src="public/ERD.svg" alt="diagrama entidad-relación de la base de datos" onclick="window.open('/ERD.svg', '_blank')" />
+            </div>
+            
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Mapa de Navegación - Portal de Usuario</p>
+            <div class="flex justify-center items-center" style="height: 65vh">
+              <img style="max-height: 100%; max-width: 90%; object-fit: contain; cursor: zoom-in;" src="public/map-user.png" alt="mapa de navegación del portal de usuario" onclick="window.open('/map-user.png', '_blank')" />
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Mapa de Navegación - Panel de Administración</p>
+            <div class="flex justify-center items-center" style="height: 65vh">
+              <img style="max-height: 100%; max-width: 90%; object-fit: contain; cursor: zoom-in;" src="public/map-admin.png" alt="mapa de navegación del panel de administración" onclick="window.open('/map-admin.png', '_blank')" />
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">3. Implementación Modular y Codificación</p>
+            <ul style="font-size: 0.65em; text-align: left">
+              <li><b style="color: #5d47bb">Tecnologías Clave:</b> Next.js (SSR/CSR), Fastify (alto rendimiento), PostgreSQL con Prisma, Three.js (recorridos 3D), MediaPipe (IA).</li>
+              <li><b style="color: #5d47bb">Desarrollo Incremental:</b> Construcción progresiva desde núcleo funcional (autenticación) hasta módulos complejos (recorridos virtuales, chat en tiempo real).</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Desarrollo de Módulos</p>
+            <ul style="font-size: 0.6em; text-align: left">
+              <li><b style="color: #5d47bb">Enfoque Modular:</b> Implementación estructurada en módulos independientes que reflejan los dominios funcionales del sistema.</li>
+              <li><b style="color: #5d47bb">Cronograma Consolidado:</b> Registro de 238 días de esfuerzo efectivo acumulado a lo largo de múltiples iteraciones del modelo incremental.</li>
+              <li><b style="color: #5d47bb">Mayor Inversión:</b> Componentes de alta complejidad como modelado y animación 3D (100 días) y arquitectura de recorridos virtuales (20 días).</li>
+              <li><b style="color: #5d47bb">Módulos Implementados:</b> 11 módulos backend (auth, users, spaces, booking, chat, etc.), dashboards frontend, sistema de notificaciones push y reportes.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Módulos de Funcionalidad Principal</p>
+            <ul style="font-size: 0.6em; text-align: left">
+              <li><b style="color: #5d47bb">Autenticación (auth):</b> Registro, login, recuperación de contraseña, verificación de cuentas y gestión de tokens JWT.</li>
+              <li><b style="color: #5d47bb">Espacios (space):</b> Gestión completa de espacios (CRUD), consulta de disponibilidad, filtros avanzados, favoritos y carga de imágenes.</li>
+              <li><b style="color: #5d47bb">Reservas (booking):</b> Solicitud de reservas, aprobación/rechazo por administradores, validación de conflictos, vista de calendario y gestión de estados.</li>
+              <li><b style="color: #5d47bb">Recorridos Virtuales (scene):</b> Tour 360° con navegación tradicional, control por voz, gestos con IA (MediaPipe) y giroscopio móvil.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Módulos de Soporte y Administración</p>
+            <ul style="font-size: 0.6em; text-align: left">
+              <li><b style="color: #5d47bb">Usuarios (users):</b> Gestión de perfiles, roles (5 niveles), asignación de permisos RBAC y administración de dependencias.</li>
+              <li><b style="color: #5d47bb">Chat en Tiempo Real (comment):</b> Comunicación bidireccional vía WebSockets entre usuarios y administradores de solicitudes.</li>
+              <li><b style="color: #5d47bb">Notificaciones Push (notification):</b> Sistema de notificaciones en tiempo real con Service Workers y protocolo VAPID.</li>
+              <li><b style="color: #5d47bb">Auditoría (auditlog):</b> Registro automático de todas las acciones críticas del sistema con trazabilidad completa.</li>
+              <li><b style="color: #5d47bb">Reportes (report):</b> Dashboard con gráficas interactivas, exportación a Excel y análisis de uso del sistema.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">4. Pruebas, Integración y Refinamiento</p>
+            <ul style="font-size: 0.65em; text-align: left">
+              <li><b style="color: #5d47bb">Pruebas Funcionales por Roles:</b> Validación completa de los 5 roles del sistema con sus funcionalidades específicas y restricciones de acceso.</li>
+              <li><b style="color: #5d47bb">Pruebas de Usabilidad:</b> Evaluación basada en las 10 heurísticas de Nielsen mediante evaluación experta por profesores especialistas.</li>
+              <li><b style="color: #5d47bb">Pruebas de Integración:</b> Verificación de comunicación entre frontend-backend, WebSockets, notificaciones push y almacenamiento de objetos.</li>
+              <li><b style="color: #5d47bb">Pruebas de Compatibilidad:</b> Validación en múltiples navegadores (Chrome, Firefox, Safari, Edge) y dispositivos (desktop, móvil, tablet).</li>
+              <li><b style="color: #5d47bb">Refinamiento Continuo:</b> Ajustes basados en retroalimentación.</li>
+            </ul>
+          </section>
+
+         
+        </section>
+
+        <!-- Resultados -->
+        <section data-transition="convex-in convex-out">
+          <section data-auto-animate>
+            <p class="title relative">Resultados</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Organización de Resultados - 8 Módulos Funcionales</p>
+            <ul style="font-size: 0.75em; text-align: left">
+              <li>1. Gestión de Perfiles</li>
+              <li>2. Gestión de Espacios</li>
+              <li>3. Reservas y Solicitudes</li>
+              <li>4. Comunicación en Tiempo Real</li>
+              <li>5. Recorridos Virtuales e Interacción Avanzada</li>
+              <li>6. Reportes</li>
+              <li>7. Administración del Sistema</li>
+              <li>8. Auditoría</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Módulos Principales (1/2)</p>
+            <ul style="font-size: 0.58em; text-align: left">
+              <li><b style="color: #5d47bb">1. Gestión de Perfiles:</b> Autenticación diferenciada (Portal público con registro/recuperación vs Panel restrictivo). 5 roles: USER, SUPERADMIN, DEPENDENCY_ADMIN, REQUEST_ADMIN, READER_ADMIN. Validación JWT con sliding sessions.</li>
+              <li><b style="color: #5d47bb">2. Gestión de Espacios:</b> Catálogo con 10+ filtros combinables (tipo, dependencia, ubicación, capacidad, recursos, disponibilidad temporal). Editor gráfico de tours 360° con hotspots. Sistema de favoritos sincronizado.</li>
+              <li><b style="color: #5d47bb">3. Reservas y Solicitudes:</b> 6 estados (PENDING, APPROVED, REJECTED, CANCELLED, COMPLETED, EXPIRED). Validación automática de conflictos. Cambios de estado automáticos mediante cron jobs. Calendario interactivo mensual.</li>
+              <li><b style="color: #5d47bb">4. Comunicación en Tiempo Real:</b> Chat contextual por reserva vía WebSockets. Notificaciones push nativas (VAPID) con Service Workers. Sincronización automática de estado con TanStack Query.</li>
+            </ul>
+          </section>
+
+          <section data-transition="convex">
+            <p class="small-title">Módulos Principales (2/2)</p>
+            <ul style="font-size: 0.58em; text-align: left">
+              <li><b style="color: #5d47bb">5. Recorridos Virtuales e Interacción Avanzada:</b> Renderizado WebGL con Three.js. 4 métodos de navegación: tradicional (mouse/touch), giroscopio móvil, control por voz (Web Speech API), gestos faciales y manos (MediaPipe - Edge AI).</li>
+              <li><b style="color: #5d47bb">6. Reportes:</b> Dashboard con gráficas interactivas (Chart.js). Análisis por dependencia, espacio, tipo y período temporal. Exportación a Excel. Métricas de ocupación, tendencias y recursos más solicitados.</li>
+              <li><b style="color: #5d47bb">7. Administración del Sistema:</b> Gestión de dependencias (CRUD completo). Gestión de usuarios (creación, edición, asignación de roles y dependencias). Operaciones masivas (eliminación de solicitudes por espacio). Exclusivo para SUPERADMIN.</li>
+              <li><b style="color: #5d47bb">8. Auditoría:</b> Registro automático e inmutable de operaciones críticas (creación, edición, eliminación, cambios de estado). Filtrado por tipo de acción, usuario y rango temporal. Trazabilidad completa con timestamp y responsable.</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Despliegue -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative">Despliegue de la Aplicación</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="title relative" style="font-size: 1em">Despliegue de la Aplicación</p>
+            <ul style="font-size: 0.75em; text-align: left">
+              <li><b style="color: #5d47bb">Infraestructura:</b> Despliegue realizado en un Servidor VPS de la UCV.</li>
+              <li><b style="color: #5d47bb">Contenedorización:</b> Aislamiento de servicios utilizando Docker y Docker Compose para garantizar reproducibilidad.</li>
+              <li><b style="color: #5d47bb">Entornos seguros:</b> Implementación estricta del protocolo HTTPS y encriptación de datos sensibles.</li>
+            </ul>
+            <div class="flex justify-center mt-4">
+              <img src="public/servidor-en-la-nube.png" alt="servidor-nube" width="250" />
+            </div>
+          </section>
+        </section>
+
+        <!-- Conclusiones -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative">Conclusiones</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="title relative" style="font-size: 1em">
+              Conclusiones
+            </p>
+            <ul style="font-size: 0.65em; text-align: left">
+              <li><b style="color: #5d47bb">Arquitectura y Requerimientos:</b> El análisis exhaustivo y diseño basado en monorepo con separación Cliente-Servidor proveyó una base tecnológica robusta. PostgreSQL y Prisma ORM garantizaron rigurosidad transaccional, resolviendo reservas solapadas y duplicidad de información.</li>
+              <li><b style="color: #5d47bb">Diseño de Interfaz Adaptada por Roles:</b> Se democratizó el acceso a la información institucional mediante un entorno transparente e intuitivo, agilizando procesos que tradicionalmente consumían tiempo excesivo.</li>
+              <li><b style="color: #5d47bb">Sistema Inmersivo con IA:</b> Los recorridos virtuales 360° potenciados por reconocimiento gestual resolvieron el desconocimiento espacial previo, permitiendo decisiones informadas de forma remota.</li>
+              <li><b style="color: #5d47bb">Validación y Despliegue:</b> Las pruebas formales validaron la efectividad ante diversos perfiles, culminando con despliegue exitoso en VPS de la UCV, demostrando viabilidad operativa en entorno institucional real.</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Recomendaciones -->
+        <section data-transition="convex-in convex-out">
+          <section data-transition="convex">
+            <p class="title relative">Recomendaciones</p>
+          </section>
+
+          <section data-transition="convex">
+            <p class="title relative" style="font-size: 1em">
+              Recomendaciones Institucionales
+            </p>
+            <ul style="font-size: 0.7em; text-align: left">
+              <li><b style="color: #5d47bb">Adopción formal del sistema:</b> Oficializar SIGE como única plataforma vinculante para reserva y gestión de espacios, mitigando resistencia al cambio y evitando redundancia operativa.</li>
+              <li><b style="color: #5d47bb">Capacitación de usuarios:</b> Diseñar programa de inducción institucional utilizando los Manuales de Usuario y Administrador como guía fundamental para estandarizar el proceso.</li>
+              <li><b style="color: #5d47bb">Integración con normativas:</b> Articular flujos de trabajo con calendarios académicos y sistemas de control de estudios para priorización automática según planificación semestral.</li>
+            </ul>
+          </section>
+
+          <section data-auto-animate>
+            <p class="title relative" style="font-size: 1em">
+              Recomendaciones Técnicas
+            </p>
+            <ul style="font-size: 0.65em; text-align: left">
+              <li><b style="color: #5d47bb">Mantenimiento y sostenibilidad:</b> Establecer protocolo con monitoreo de recursos del servidor, respaldos automáticos de base de datos y actualización periódica de dependencias para parchear vulnerabilidades.</li>
+              <li><b style="color: #5d47bb">Autenticación centralizada:</b> Integrar inicio de sesión con servicios de directorio institucional de la UCV, eliminando gestión de credenciales separadas.</li>
+              <li><b style="color: #5d47bb">Notificaciones ampliadas:</b> Incorporar alertas vía correo electrónico institucional o SMS/WhatsApp sobre aprobación, rechazo o modificación de reservas.</li>
+              <li><b style="color: #5d47bb">Expansión funcional:</b> Desarrollar aplicación móvil nativa, soporte WebXR para dispositivos VR dedicados y extensión a otras facultades aprovechando arquitectura escalable.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-transition="convex">
+          <p class="small-title">📚 Referencias</p>
+          <div
+            class="box-border flex flex-col p-8 gap-2"
+            style="text-align: left; font-size: 0.7em"
+          >
+            <span>Anderson, D. J. (2010). <i>Kanban: Successful Evolutionary Change for Your Technology Business</i>. Blue Hole Press.</span>
+            <span>Buschmann, F., Meunier, R., Rohnert, H., Sommerlad, P., & Stal, M. (2007). <i>Pattern-Oriented Software Architecture: A System of Patterns</i>. John Wiley & Sons.</span>
+            <span>Dahl, R. (2009). <i>Node.js Documentation</i>. <a href="https://nodejs.org/en/docs/">https://nodejs.org/en/docs/</a></span>
+            <span>Facebook. (2013). <i>React: A JavaScript library for building user interfaces</i>. <a href="https://reactjs.org/">https://reactjs.org/</a></span>
+            <span>Fastify. (2023). <i>The Fast and Low Overhead Web Framework for Node.js</i>. <a href="https://www.fastify.io">https://www.fastify.io</a></span>
+            <span>Google. (2023). <i>MediaPipe Solutions Guide</i>. <a href="https://developers.google.com/mediapipe">https://developers.google.com/mediapipe</a></span>
+            <span>Merkel, D. (2014). Docker: lightweight linux containers for consistent development and deployment. <i>Linux Journal</i>.</span>
+            <span>Next.js. (2023). <i>Next.js Documentation</i>. <a href="https://nextjs.org/docs">https://nextjs.org/docs</a></span>
+            <span>PostgreSQL Global Development Group. (2023). <i>PostgreSQL 16 Documentation</i>. <a href="https://www.postgresql.org/docs/">https://www.postgresql.org/docs/</a></span>
+            <span>Prisma. (2023). <i>Prisma ORM Documentation</i>. <a href="https://www.prisma.io/docs/">https://www.prisma.io/docs/</a></span>
+            <span>Facultad de Ciencias - UCV. (s.f.). <a href="https://www.ciens.ucv.ve/">https://www.ciens.ucv.ve/</a></span>
+            <span>Vercel. (2023). <i>Turborepo: The High-performance Build System for JavaScript and TypeScript</i>. <a href="https://turbo.build/repo">https://turbo.build/repo</a></span>
+          </div>
+        </section>
+
+        <section data-transition="concave">
+          <p class="small-title" style="pointer-events: none;">🙏 Gracias</p>
+          <div class="relative ">
+            <iframe 
+              id="scene-iframe"
+              src="scene.html" 
+              width="700" 
+              height="700" 
+              frameborder="0"
+              style="border: none; background: transparent; pointer-events: none;"
+              title="3D Interactive Scene"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      // Send mouse position to iframe for 3D scene interaction
+      document.addEventListener('mousemove', (event) => {
+        const iframe = document.getElementById('scene-iframe');
+        if (iframe && iframe.contentWindow) {
+          const x = (event.clientX / window.innerWidth) * 2 - 1;
+          const y = -(event.clientY / window.innerHeight) * 2 + 1;
+          iframe.contentWindow.postMessage({
+            type: 'mousemove',
+            x: x,
+            y: y
+          }, '*');
+        }
+      });
+    </script>
+  </body>
+</html>
